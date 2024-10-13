@@ -171,8 +171,8 @@
 											<p>Feb 2020 - May 2020 • 8 mos</p>
 											<p><span class="Responsabilities"><strong>Responsabilities:</strong> Development of Machine Learning algorithms capable of predicting Lane changing/ Lane Keeping maneuvers in order to increase safety while driving a motor vehicle,
 												using preprocessing techniques analysis and evaluation of data provided by the FCA research group.</span></p>
+												<p><span class="Goal"><strong>Publication:</strong> <a href="https://link.springer.com/chapter/10.1007/978-3-030-86841-3_12"> A Decision Model for Enhancing Driving Security</a> • Springer journal</span></p>
 											<p><span class="technologies"><strong>Technologies:</strong> SVM, Random Forest, Big Data, Real Data, On-Prem</span></p>
-											<p><span class="Goal"><strong>Publication:</strong> <a href="https://link.springer.com/chapter/10.1007/978-3-030-86841-3_12"> A Decision Model for Enhancing Driving Security</a> • Springer journal</span></p>
 										</div>
 
 									</div>
@@ -212,7 +212,7 @@
 											<td>Azure</td>
 										</tr>
 										<tr>
-											<td><a href="#trafficmonitor">Traffic Detector</a></td>
+											<td><a href="#trafficmonitor">Inbound Visits Forecaster</a></td>
 											<td>Regression models for visit forcaster</td>
 											<td>Azure</td>
 										</tr>
@@ -246,11 +246,13 @@
 
 							<!-- Project: Chatbot -->
 							<section id="rag" class="project-details">
-								<h2>Retrieve Augmented Generation • RAG</h2>
-								<p><strong>Purpose:</strong> Generative AI models for internal document consultations and smart tasks operations.</p>
-								<p><strong>Model Used:</strong> LLM, LMM</p>
-								<p><strong>Cloud Service:</strong> AWS</p>
-								<!-- <p><strong>Reference Papers:</strong> <a href="https://example.com/paper_chatbot" target="_blank">View Paper</a></p> -->
+								<h2>Retrieve Augmented Generation (RAG)</h2>
+								<p><strong>Purpose:</strong> Leverage generative AI models for efficient documents retrieval and intelligent consultations, task automation and enhancing productivity in large-scale operations.</p>
+								<p><strong>Models:</strong> Large Language Models (LLM) and Large Multimodal Models (LMM)</p>
+								<p><strong>Cloud:</strong> AWS</p>
+								<p><strong>Reference Papers:</strong> <a href="https://arxiv.org/abs/2005.11401" target="_blank">Knowledge-Intensive NLP Tasks</a>, 
+									<a href="https://arxiv.org/abs/2402.19473" target="_blank">AI-Generated Content: A Survey</a>, 
+									<a href="https://arxiv.org/html/2409.13385" target="_blank">Generation for Large Language Models: A Survey</a>...others</p>
 							</section>
 
 							<hr>
@@ -258,10 +260,12 @@
 							<!-- Project: NER -->
 							<section id="ner" class="project-details">
 								<h2>NER (Named Entity Recognition)</h2>
-								<p><strong>Purpose:</strong> BERT Finetuning for Name Entity Recognition.</p>
-								<p><strong>Model Used:</strong> BERT</p>
-								<p><strong>Cloud Service:</strong> AWS</p>
-								<!-- <p><strong>Reference Paper:</strong> <a href="https://example.com/paper_ner" target="_blank">View Paper</a></p> -->
+								<p><strong>Purpose:</strong> Fine-tuning the BERT model for high-accuracy Named Entity Recognition (NER) tasks, focusing on identifying entities within unstructured text.</p>
+								<p><strong>Model:</strong> BERT</p>
+								<p><strong>Labeling:</strong> BIO-Format</p>
+								<p><strong>Cloud:</strong> AWS</p>
+								<p><strong>Reference Paper:</strong> <a href="https://arxiv.org/abs/2211.14360" target="_blank">Finetuning BERT on Partially Annotated NER</a>, 
+									<a href="https://en.wikipedia.org/wiki/Inside–outside–beginning_(tagging)" target="_blank">Inside–outside–beginning (tagging)</a></p>
 							</section>
 							
 							<hr>
@@ -269,32 +273,40 @@
 							<!-- Project: Recommender System -->
 							<section id="widedeep" class="project-details">
 								<h2>Recommender System</h2>
-								<p><strong>Purpose:</strong> Wide And Deep model for Recommender System.</p>
-								<p><strong>Model Used:</strong> Wide & Deep</p>
-								<p><strong>Cloud Service:</strong> Azure</p>
-								<!-- <p><strong>Reference Paper:</strong> <a href="https://example.com/paper_widedeep" target="_blank">View Paper</a></p> -->
+								<p><strong>Purpose:</strong> Implement a Wide and Deep model to enhance recommendation quality by combining the power of memorization (wide component) and generalization (deep component).</p>
+								<p><strong>Model:</strong> Wide & Deep</p>
+								<p><strong>MLOPS feature:</strong> Parallel multithred Training w/Horovod</p>
+								<p><strong>Cloud:</strong> Azure</p>
+								<p><strong>Features:</strong> Supports both categorical and continuous features, allowing hybrid recommendations with collaborative filtering and content-based approaches.</p>
+								<p><strong>Reference Paper:</strong> <a href="https://dl.acm.org/doi/abs/10.1145/2988450.2988454" target="_blank">Wide & Deep Learning for Recommender Systems</a>, 
+									<a href="https://arxiv.org/abs/1606.07792" target="_blank">Wide & Deep Learning</a>, 
+									<a href="https://arxiv.org/abs/1802.05799" target="_blank">Horovod: fast and easy distributed deep learning in TensorFlow</a>...others</p>
 							</section>
 
 							<hr>
 
 							<!-- Project: Traffic Detector -->
 							<section id="trafficmonitor" class="project-details">
-								<h2>Traffic Detector</h2>
-								<p><strong>Purpose:</strong> Regression models for visit forecaster.</p>
-								<p><strong>Model Used:</strong> Linear Regression</p>
-								<p><strong>Cloud Service:</strong> Azure</p>
-								<!-- <p><strong>Reference Paper:</strong> <a href="https://example.com/paper_traffic" target="_blank">View Paper</a></p> -->
+								<h2>Inbound Forecaster</h2>
+								<p><strong>Purpose:</strong> Develop a machine learning model to forecast inbounds using seasonal patterns, optimizing resource allocation based on predicted traffic.</p>
+								<p><strong>Models:</strong> Linear and non-linear regression models (e.g., Linear Regression, ARIMA, and Random Forest Regressor)</p>
+								<p><strong>Dataset:</strong> Historical data, including seasonal trends, holidays, and events.</p>
+								<p><strong>Cloud:</strong> Azure w/AutoML</p>
+								<p><strong>Reference Paper:</strong> <a href="https://www.tandfonline.com/doi/abs/10.1080/07474938.2010.481556" target="_blank">Time Series Forecasting</a>, 
+									<a href="https://www.sciencedirect.com/science/article/abs/pii/016920709190054Y" target="_blank">Seasonality in Forecasting</a>...others</p>
 							</section>
+							
 
 							<hr>
 
 							<!-- Project: Template Detector -->
 							<section id="resnet50" class="project-details">
 								<h2>Template Detector</h2>
-								<p><strong>Purpose:</strong> Deep Learning model for Template document detector.</p>
-								<p><strong>Model Used:</strong> ResNet-50</p>
-								<p><strong>Cloud Service:</strong> Azure</p>
-								<!-- <p><strong>Reference Paper:</strong> <a href="https://example.com/paper_template" target="_blank">View Paper</a></p> -->
+								<p><strong>Purpose:</strong> Using trasfer learning model to train custom Deep Learning model for template detector.</p>
+								<p><strong>Model:</strong> ResNet50</p>
+								<p><strong>Dataset:</strong> Models have been trained and analyzed, validated using PDFs and OCR recontructions</p>
+								<p><strong>Cloud:</strong> GCP</p>
+								<p><strong>Reference Paper:</strong> <a href="https://ieeexplore.ieee.org/abstract/document/9144794" target="_blank">Logo detection</a>, <a href="https://link.springer.com/chapter/10.1007/978-1-4842-6168-2_6" target="_blank">Resnet</a>,<a href="https://www.igi-global.com/chapter/transfer-learning/36988" target="_blank">Transfer learning</a>...others </p>
 							</section>
 
 							<hr>
@@ -302,10 +314,12 @@
 							<!-- Project: Anomaly Detection -->
 							<section id="dbscan" class="project-details">
 								<h2>Anomaly Detection</h2>
-								<p><strong>Purpose:</strong> Ensemble model for transactions anomaly detector.</p>
-								<p><strong>Model Used:</strong> DBSCAN</p>
-								<p><strong>Cloud Service:</strong> Azure</p>
-								<!-- <p><strong>Reference Paper:</strong> <a href="https://example.com/paper_anomaly" target="_blank">View Paper</a></p> -->
+								<p><strong>Purpose:</strong> Ensemble model for anomaly detector.</p>
+								<p><strong>Models:</strong> DBSCAN, HDBSCAN, Isolation Tree</p>
+								<p><strong>Dataset:</strong> Models have been trained and analyzed, validated using a real dataset</p>
+								<p><strong>Statistical approaches:</strong> Z-score, IQR</p>
+								<p><strong>Cloud:</strong> Azure</p>
+								<p><strong>Reference Paper:</strong> <a href="https://www.sciencedirect.com/science/article/abs/pii/S1084804516300571" target="_blank">Fraud detection system</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025519304451" target="_blank">Combining unsupervised and supervised learning in fraud detection</a>...others</p>
 							</section>
 
 							<hr>
@@ -313,10 +327,12 @@
 							<!-- Project: Enhanced Driving Security -->
 							<section id="svm" class="project-details">
 								<h2>Enhanced Driving Security</h2>
-								<p><strong>Purpose:</strong> ADAS model to predict lane changes on the highway.</p>
-								<p><strong>Model Used:</strong> SVM</p>
-								<p><strong>Cloud Service:</strong> Prem</p>
-								<!-- <p><strong>Reference Paper:</strong> <a href="https://example.com/paper_svm" target="_blank">View Paper</a></p> -->
+								<p><strong>Purpose:</strong> ADAS lane change prediction model based on machine learning able to distinguish between left and right lane changes, a distinction that becomes particularly important when driving in a highway.</p>
+								<p><strong>Models:</strong> SVM, Random Forest</p>
+								<p><strong>Dataset:</strong> Models have been trained and validated using a real dataset gathered online by using a high-tech demonstrator vehicle provided by Centro Ricerche Fiat</p>
+								<p><strong>Methodology:</strong> Temporal sliding window, Variance amoung set of features, heading angle, LIDAR analysis</p>
+								<p><strong>Host:</strong> Prem</p>
+								<p><strong>Reference Paper:</strong> <a href="https://link.springer.com/chapter/10.1007/978-3-030-86841-3_12" target="_blank">Paper</a>, <a href="https://repository.tudelft.nl/record/uuid:9f93374b-7f79-4633-a02f-ac81f5e2da33" target="_blank">Prediction of Vehicles' Trajectories based on Driver Behavior Models</a>, <a href="https://journals.sagepub.com/doi/abs/10.1518/001872007X200157" target="_blank">Lane-Change Detection Using a Computational Driver Model</a>... others</p>
 							</section>
 							
 						</article>

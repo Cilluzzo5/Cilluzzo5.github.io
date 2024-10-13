@@ -1705,7 +1705,7 @@ input, select, textarea {
 
 .experience-details p {
     margin: 5px 0;
-    color: #555;
+    color: #e2d6d6;
 }
 
 .role-details {
@@ -1720,12 +1720,12 @@ input, select, textarea {
 .role-details p {
     margin: 3px 0;
     font-size: 14px;
-    color: #777;
+    color: #cfc2c2;
 }
 
-.skills {
+.technologies {
     font-style: italic;
-    color: #777;
+    color: #cfc2c2;
 }
 
 
