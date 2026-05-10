@@ -1731,36 +1731,219 @@ input, select, textarea {
 
 
 
+/* Portfolio: project grid (card view) */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 0 0 2rem 0;
+}
+
+    .project-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 1.5rem 3rem 1.5rem;
+        background: rgba(255, 255, 255, 0.04);
+        border: solid 1px rgba(255, 255, 255, 0.15);
+        border-radius: 4px;
+        text-decoration: none;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+        transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        cursor: pointer;
+    }
+
+    .project-card:hover {
+        background: rgba(255, 255, 255, 0.09);
+        border-color: rgba(255, 255, 255, 0.35);
+        transform: translateY(-2px);
+        text-decoration: none;
+    }
+
+    .project-card h3 {
+        color: #ffffff;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.075rem;
+        margin: 0 0 0.6rem 0;
+        line-height: 1.3;
+    }
+
+    .project-card p {
+        color: #cfc2c2;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin: 0;
+        flex-grow: 1;
+    }
+
+    .project-card .project-cloud {
+        position: absolute;
+        bottom: 1rem;
+        right: 1.5rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        color: rgba(255, 255, 255, 0.55);
+    }
+
+    @media screen and (max-width: 480px) {
+        .project-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+/* Portfolio: modal-like behavior via :target
+   - Without target: grid visible, all details hidden
+   - With target: grid hidden, only the targeted detail visible
+   - X button swapped: default X closes article, project X returns to grid */
+
 .project-details {
-    padding: 20px;
-    background-color: #e0e0e0;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    display: none;
 }
 
-.project-details h2 {
-    color: #333;
-    font-size: 1.25em;
-    margin-bottom: 10px;
+.project-details:target {
+    display: block;
 }
 
-.project-details p {
-    font-size: 1em;
-	color: #333;
-    line-height: 1.6;
-	margin-bottom: 8px
+article#portfolio:has(.project-details:target) .project-grid {
+    display: none;
 }
 
-.project-details strong {
-    font-size: 1em;
-	color: #333;
+/* Swap close buttons depending on context */
+#portfolio .close-project {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    text-indent: 4rem;
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: none;
 }
 
-.project-details a {
-    color: #007acc;
-    text-decoration: none;
+    #portfolio .close-project:before {
+        transition: background-color 0.2s ease-in-out;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        background-position: center;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+    }
+
+    #portfolio .close-project:hover:before {
+        background-color: rgba(255, 255, 255, 0.075);
+    }
+
+    #portfolio .close-project:active:before {
+        background-color: rgba(255, 255, 255, 0.175);
+    }
+
+article#portfolio:has(.project-details:target) .close-project {
+    display: block;
 }
 
-.project-details a:hover {
-    text-decoration: underline;
+article#portfolio:has(.project-details:target) .close {
+    display: none;
 }
+
+/* Portfolio: project detail (expanded view) */
+
+.project-details {
+    padding: 0;
+    background: transparent;
+    margin-bottom: 1.5rem;
+}
+
+    .project-details .project-back {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        color: rgba(255, 255, 255, 0.55);
+        border-bottom: none;
+        margin-bottom: 1.5rem;
+        transition: color 0.2s ease;
+    }
+
+    .project-details .project-back:hover {
+        color: #ffffff;
+    }
+
+    .project-details h2 {
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        margin: 0 0 1.5rem 0;
+        padding-bottom: 0.75rem;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+    }
+
+    .project-details p {
+        font-size: 0.95rem;
+        color: #ffffff;
+        line-height: 1.65;
+        margin-bottom: 1rem;
+    }
+
+    .project-details strong {
+        display: block;
+        color: rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.15rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .project-details a {
+        color: inherit;
+        border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .project-details a:hover {
+        color: #ffffff;
+        border-bottom-color: #ffffff;
+    }
+
+    .project-details ul.project-refs {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem 0;
+    }
+
+        .project-details ul.project-refs li {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            padding: 0.35rem 0 0.35rem 1rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .project-details ul.project-refs li:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.95rem;
+            width: 6px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.4);
+        }
